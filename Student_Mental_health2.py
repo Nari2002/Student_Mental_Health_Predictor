@@ -5,7 +5,7 @@ import pickle
 
 
 
-model=pickle.load(open("C:/Users/soppoju narender/Desktop/FS-DataScience/ML_module/Student_Mental_Health_Prediction/Student_Mental_Health_System.pkl","rb"))
+model=pickle.load(open("Student_Mental_Health_System.pkl","rb"))
 
 cources=['Engineering', 'Islamic education', 'BIT', 'Laws', 'Mathemathics',
    'Pendidikan islam', 'BCS', 'Human Resources', 'Irkhs',
