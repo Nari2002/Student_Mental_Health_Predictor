@@ -37,53 +37,50 @@ def health_pred(Course, Marital_status, Depression, Anxiety, PanicAttack):
     else:
         return st.markdown('<h1 class="title">Dear Student, You May Need Treatment</h1><br>', unsafe_allow_html=True)
 
-def main():
-    st.markdown('<h1 class="title">Student Mental Health Predicto</h1><br>', unsafe_allow_html=True)
-   
 
-    # Set background image
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            background: url("https://health.clevelandclinic.org/wp-content/uploads/sites/3/2023/08/college-Students-mental-health1-1397488501-770x533-1.jpg");
-            background-size: cover;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-           st.markdown(
-               """
-               <style>
-               /* CSS for title */
-               .title {
-                   font-size: 36px;
-                   color: white; /* Black font color */
-                   text-align: center;
-                   background-color: black; /* White background color */
-                   padding: 10px; /* Add padding for spacing */
-               }
-               </style>
-               """,
-               unsafe_allow_html=True,
-           )
+st.markdown('<h1 class="title">Student Mental Health Predicto</h1><br>', unsafe_allow_html=True)
 
-    # Place input controls in the sidebar
-    with st.sidebar:
-        st.image("https://metro.co.uk/wp-content/uploads/2017/10/menal-health-at-uni.png?quality=90&strip=all&zoom=1&resize=768%2C576", width=300)
-        Course = st.selectbox("Select your course", cources)
-        Marital_status = st.selectbox("Marital status", ["Single", "Commited or InRelationship"])
-        Depression = st.selectbox("Do you have Depression?", ["No", "Yes"])
-        Anxiety = st.selectbox("Do you have Anxiety?", ["No", "Yes"])
-        PanicAttack = st.selectbox("Do you have Panic attack?", ["No", "Yes"])
 
-    diagnosis = ''
-    if st.button("Predict My Mental Health"):
-        diagnosis = health_pred(Course, Marital_status, Depression, Anxiety, PanicAttack)
+# Set background image
+st.markdown(
+"""
+<style>
+.stApp {
+background: url("https://health.clevelandclinic.org/wp-content/uploads/sites/3/2023/08/college-Students-mental-health1-1397488501-770x533-1.jpg");
+background-size: cover;
+}
+</style>
+""",
+unsafe_allow_html=True
+)
+st.markdown(
+"""
+<style>
+/* CSS for title */
+.title {
+font-size: 36px;
+color: white; /* Black font color */
+text-align: center;
+background-color: black; /* White background color */
+padding: 10px; /* Add padding for spacing */
+}
+</style>
+""",
+unsafe_allow_html=True,
+)
 
-    st.success(diagnosis)
+# Place input controls in the sidebar
+with st.sidebar:
+           st.image("https://metro.co.uk/wp-content/uploads/2017/10/menal-health-at-uni.png?quality=90&strip=all&zoom=1&resize=768%2C576", width=300)
+           Course = st.selectbox("Select your course", cources)
+           Marital_status = st.selectbox("Marital status", ["Single", "Commited or InRelationship"])
+           Depression = st.selectbox("Do you have Depression?", ["No", "Yes"])
+           Anxiety = st.selectbox("Do you have Anxiety?", ["No", "Yes"])
+           PanicAttack = st.selectbox("Do you have Panic attack?", ["No", "Yes"])
 
-if __name__ == '__main__':
-    main()
+diagnosis = ''
+if st.button("Predict My Mental Health"):
+           diagnosis = health_pred(Course, Marital_status, Depression, Anxiety, PanicAttack)
+
+st.success(diagnosis)
 
