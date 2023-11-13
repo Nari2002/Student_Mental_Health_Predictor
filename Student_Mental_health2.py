@@ -53,21 +53,21 @@ def main():
         """,
         unsafe_allow_html=True
     )
-   st.markdown(
-    """
-    <style>
-    /* CSS for title */
-    .title {
-        font-size: 36px;
-        color: white; /* Black font color */
-        text-align: center;
-        background-color: black; /* White background color */
-        padding: 10px; /* Add padding for spacing */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+           st.markdown(
+               """
+               <style>
+               /* CSS for title */
+               .title {
+                   font-size: 36px;
+                   color: white; /* Black font color */
+                   text-align: center;
+                   background-color: black; /* White background color */
+                   padding: 10px; /* Add padding for spacing */
+               }
+               </style>
+               """,
+               unsafe_allow_html=True,
+           )
 
     # Place input controls in the sidebar
     with st.sidebar:
