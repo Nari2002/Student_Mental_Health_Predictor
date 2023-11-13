@@ -38,7 +38,7 @@ def health_pred(Course, Marital_status, Depression, Anxiety, PanicAttack):
         return st.markdown('<h1 class="title">Dear Student, You May Need Treatment</h1><br>', unsafe_allow_html=True)
 
 
-st.markdown('<h1 class="title">Student Mental Health Predictor</h1><br>', unsafe_allow_html=True)
+st.markdown('<h1 class="title">Student Mental Health Prediction</h1><br>', unsafe_allow_html=True)
 
 
 # Set background image
